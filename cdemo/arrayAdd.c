@@ -3,23 +3,26 @@
 int arrayAdd (int *arr, int s, int n)
 
 {
-  int i = 0;
-
-  int c = i * i + n;
-  i++;
-  return c;
+   for (int i = 0; i < 100; i++)
+   {
+     arr[i] = arr[i] + n;
+   }
 
 }
 int main(void) 
 {
+int arr[100];
+for (int i = 0; i < 100; i++)
+ {
+  arr[i]= i*i;
+ }
+
 int s = 100;
 int n = 2;
-int arr[s];
-
+  arrayAdd(arr, s, n);
   for (int i = 0; i < 100; i++)
   {
-    int d = arrayAdd(arr, s, n);
-    printf("%d\n", d );
+    printf("%d\n", arr[i]);
   }
 
 }
