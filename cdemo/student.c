@@ -1,3 +1,4 @@
+    
 #include <stdio.h>
 #include <string.h>
 
@@ -23,7 +24,7 @@ int main ()
   
   int studentnumber;
   char input [300];
-  printf("How many students"?); 
+  printf("How many students?\n"); 
   fgets(input, 300, stdin);
   sscanf(input, "%d", &studentnumber);
   
@@ -31,25 +32,25 @@ int main ()
   while (count < studentnumber)
   {
     char first[20];
-    printf("Enter first name"\n);
+    printf("Enter first name\n");
     fgets(input, 300, stdin);
     sscanf(input, "%s", first);
     strcpy(studentArr[count].firstname, first);
     
     char last[20];
-    printf("Enter last name"\n);
+    printf("Enter last name\n");
     fgets(input, 300, stdin);
     sscanf(input, "%s", last);
     strcpy(studentArr[count].lastname, first);
     
     int ageInput;
-    printf("Enter student age:");
+    printf("Enter student age:\n");
     fgets(input, 300, stdin);
     sscanf(input, "%d", &ageInput);
     studentArr[count].age = ageInput; 
 
     int idinput;
-    printf("Enter student id:");
+    printf("Enter student id:\n");
     fgets(input, 300, stdin);
     sscanf(input, "%d", &idinput); 
     studentArr[count].studentid = idinput;
@@ -59,7 +60,7 @@ int main ()
 
 for (int p = 0; p<studentnumber; p++)
 {
-  printStudent(&studentArr[f]);
+  printStudent(&studentArr[p]);
 }
   return 0;
 }
